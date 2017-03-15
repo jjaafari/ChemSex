@@ -1,0 +1,43 @@
+/* jshint indent: 2 */
+
+module.exports = function(sequelize, DataTypes) {
+  return sequelize.define('cList_scrape', { 
+    id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    age: {
+      type: DataTypes.INTEGER(45),
+      allowNull: true,
+    },
+      location: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+      top: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+      bottom: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+      party: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+      timestamp: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+  }, {
+    timestamps: false,
+    freezeTableName: true
+  });
+};
